@@ -1,0 +1,25 @@
+#random {
+  display: none;
+  background-color: white;
+  border-radius: 20px;
+  width: 70%;
+  text-align: center; /*요소 가운데 정렬*/
+  margin-left: auto; /*가로 중앙*/
+  margin-right: auto; /*가로 중앙*/
+}
+#randomList {
+  text-align: center; /*요소 가운데 정렬*/
+  margin-left: auto; /*가로 중앙*/
+  margin-right: auto; /*가로 중앙*/
+}
+#randomList > button {
+  background-image: url(../img/dish.png);
+  background-color: transparent;
+  border: none;
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline;
+}

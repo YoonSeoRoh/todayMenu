@@ -4,15 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/favicon.ico">
     <title>오늘 뭐 먹지?</title>
+     <!-- css -->
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/foodType.css">
+    <link rel="stylesheet" href="./css/random.css">
+    <link rel="stylesheet" href="./css/result.css">
+    <link rel="stylesheet" href="./css/animation.css">
 </head>
 <body>
     <div class="container">
         <section id="main">
+            <h1 id="title">오늘 뭐 먹지&#10067;</h1>
+            <div id="logo">
+                <img src="img/logo.png" alt="" width="40%" height="40%">
+            </div>
+            <button id="startBtn" onClick="start()">시작하기</button>
+        </section>
+        <section id="foodType">
+            <p class="query">어떤 종류의 음식을 원하시나요?</p>
+            <div id="typeList">
+                <button>한식</button>
+                <button>중식</button>
+                <button>일식</button>
+                <button>양식</button>
+                <button onClick="randomPick()">모르겠어! 랜덤뽑기&#9889;</button>
+            </div>
+        </section>
+        <section id="random">
+            <p>선택해주세요!</p>
+            <div id="randomList">
+
+            </div>
+        </section>
+        <section id="question">
 
         </section>
+        <section id="result">
+            <h1>오늘의 추천 메뉴&#10071;</h1>
+            <div id="recommend">
+
+            </div>
+            <button id="kakaoBtn">공유하기</button>
+            <button id="homeBtn" onClick="home()">다시하기</button>
+        </section>
     </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

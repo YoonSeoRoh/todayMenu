@@ -1,3 +1,38 @@
+@font-face {
+  font-family: "SBAggroB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-color: #ffb951;
+}
+h1 {
+  font-family: "SBAggroB";
+  font-size: 40px;
+  margin: 30px;
+  padding-top: 30px;
+}
+p {
+  font-family: "GmarketSansMedium";
+  font-size: 30px;
+  margin: 30px;
+  padding-top: 30px;
+}
+button {
+  cursor: pointer;
+  font-family: "GmarketSansMedium";
+  font-size: 20px;
+}
+.query {
+  margin: 20px;
+  padding: 20px;
 }
