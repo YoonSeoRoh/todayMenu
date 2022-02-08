@@ -23,16 +23,35 @@ h1 {
 }
 p {
   font-family: "GmarketSansMedium";
+  margin: 30px;
+  padding-top: 30px;
+}
+span {
+  font-family: "GmarketSansMedium";
   font-size: 30px;
   margin: 30px;
   padding-top: 30px;
+  padding-bottom: 30px;
+  display: block;
 }
 button {
   cursor: pointer;
   font-family: "GmarketSansMedium";
   font-size: 20px;
 }
+img {
+  margin-left: auto; /*°¡·Î Áß¾Ó*/
+  margin-right: auto; /*°¡·Î Áß¾Ó*/
+  display: block;
+}
 .query {
   margin: 20px;
   padding: 20px;
+}
+.fontNormal {
+  font-size: 30px;
+}
+.fontSmall {
+  font-size: 15px;
+  color: #a9a9a9;
 }

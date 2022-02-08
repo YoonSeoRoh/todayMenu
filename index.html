@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="./img/favicon.ico">
+    <!-- 애플기기를 위해 -->
+    <link rel="apple-touch-icon-precomposed" href="./img/favicon.ico"/>
     <title>오늘 뭐 먹지?</title>
-     <!-- css -->
+    <!-- css -->
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/foodType.css">
@@ -25,31 +27,41 @@
             <button id="startBtn" onClick="start()">시작하기</button>
         </section>
         <section id="foodType">
-            <p class="query">어떤 종류의 음식을 원하시나요?</p>
+            <p class="query fontNormal">어떤 종류의 음식을 원하시나요?</p>
             <div id="typeList">
-                <button>한식</button>
-                <button>중식</button>
-                <button>일식</button>
-                <button>양식</button>
-                <button onClick="randomPick()">모르겠어! 랜덤뽑기&#9889;</button>
+                <div id="faceImg">
+                    <img src="img/questionFace.png" alt="" width="20%" height="20%">
+                </div>
+                <button class="typeBtn" id="한식" onClick="ask(this.id)">한국인은 역시 한식</button>
+                <button class="typeBtn" id="중식" onClick="ask(this.id)">짬뽕? 짜장면? 중식!</button>
+                <button class="typeBtn" id="일식" onClick="ask(this.id)">오늘은 왠지 일식~</button>
+                <button class="typeBtn" id="양식" onClick="ask(this.id)">특별한 날은 양식!</button>
+                <button class="typeBtn" onClick="randomPick()">모르겠어! 랜덤뽑기&#9889;</button>
             </div>
         </section>
         <section id="random">
-            <p>선택해주세요!</p>
+            <p class="fontNormal">선택해주세요!</p>
             <div id="randomList">
-
+                <button id="1" onClick="pick(this.id)"></button>
+                <button id="2" onClick="pick(this.id)"></button>
+                <button id="3" onClick="pick(this.id)"></button>
+                <button id="4" onClick="pick(this.id)"></button>
             </div>
         </section>
         <section id="question">
+            <p id="qna" class="query fontNormal"></p>
+            <div id="answerList">
 
+            </div>
         </section>
         <section id="result">
             <h1>오늘의 추천 메뉴&#10071;</h1>
             <div id="recommend">
 
             </div>
-            <button id="kakaoBtn">공유하기</button>
-            <button id="homeBtn" onClick="home()">다시하기</button>
+            <button id="homeBtn" onClick="home()">다시 추천받기</button>
+            <button id="kakaoBtn">결과 공유하기</button>
+            <button id="restaurantBtn">맛집 구경하기</button>
         </section>
     </div>
     <script src="js/data.js"></script>
