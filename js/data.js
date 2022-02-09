@@ -31,6 +31,7 @@ const foodList = [
     img: "img/noodle.png",
     type: "한식",
     data: ["a", "a"],
+    link: "resultPage/result01.html",
   },
   {
     name: "비빔냉면",
@@ -38,6 +39,7 @@ const foodList = [
     img: "img/noodle.png",
     type: "한식",
     data: ["a", "b"],
+    link: "resultPage/result02.html",
   },
   {
     name: "순대국밥",
@@ -45,6 +47,7 @@ const foodList = [
     img: "img/soup.png",
     type: "한식",
     data: ["b", "a"],
+    link: "resultPage/result03.html",
   },
   {
     name: "제육볶음",
@@ -52,6 +55,7 @@ const foodList = [
     img: "img/meat1.png",
     type: "한식",
     data: ["b", "b"],
+    link: "resultPage/result04.html",
   },
   {
     name: "전골",
@@ -59,6 +63,7 @@ const foodList = [
     img: "img/hot-pot.png",
     type: "한식",
     data: ["c", "a"],
+    link: "resultPage/result05.html",
   },
   {
     name: "삼겹살",
@@ -66,36 +71,42 @@ const foodList = [
     img: "img/meat2.png",
     type: "한식",
     data: ["c", "b"],
+    link: "resultPage/result06.html",
   },
   {
     name: "잔치국수",
     words: "잔치국수 먹으면서 잔치 열자!",
     img: "img/noodle.png",
     type: "한식",
+    link: "resultPage/result07.html",
   },
   {
     name: "물냉면",
     words: "여름을 느끼고 싶을 땐 물냉면~",
     img: "img/noodle.png",
     type: "한식",
+    link: "resultPage/result08.html",
   },
   {
     name: "소불고기",
     words: "점잖은 소불고기 먹고 오늘 하루도 화이팅~",
     img: "img/meat1.png",
     type: "한식",
+    link: "resultPage/result09.html",
   },
   {
     name: "육개장",
     words: "역시 따뜻한 국물은 육개장...!",
     img: "img/soup.png",
     type: "한식",
+    link: "resultPage/result10.html",
   },
   {
     name: "설렁탕",
     words: "해장하기 딱 좋은 설렁탕~~~",
     img: "img/soup.png",
     type: "한식",
+    link: "resultPage/result11.html",
   },
   {
     name: "까르보나라",
@@ -103,6 +114,7 @@ const foodList = [
     img: "img/pasta2.png",
     type: "양식",
     data: ["a", "a"],
+    link: "resultPage/result12.html",
   },
   {
     name: "스파게티",
@@ -110,6 +122,7 @@ const foodList = [
     img: "img/pasta1.png",
     type: "양식",
     data: ["a", "b"],
+    link: "resultPage/result13.html",
   },
   {
     name: "로제파스타",
@@ -117,6 +130,7 @@ const foodList = [
     img: "img/pasta3.png",
     type: "양식",
     data: ["a", "c"],
+    link: "resultPage/result14.html",
   },
   {
     name: "베이컨크림리조또",
@@ -124,6 +138,7 @@ const foodList = [
     img: "img/risotto.png",
     type: "양식",
     data: ["b", "a"],
+    link: "resultPage/result15.html",
   },
   {
     name: "해물토마토리조또",
@@ -131,6 +146,7 @@ const foodList = [
     img: "img/risotto.png",
     type: "양식",
     data: ["b", "b"],
+    link: "resultPage/result16.html",
   },
   {
     name: "치킨로제리조또",
@@ -138,6 +154,7 @@ const foodList = [
     img: "img/risotto.png",
     type: "양식",
     data: ["b", "c"],
+    link: "resultPage/result17.html",
   },
   {
     name: "베이컨크림 감자뇨끼",
@@ -145,6 +162,7 @@ const foodList = [
     img: "img/gnocchi.png",
     type: "양식",
     data: ["c", "a"],
+    link: "resultPage/result18.html",
   },
   {
     name: "페퍼로니 피자",
@@ -152,6 +170,7 @@ const foodList = [
     img: "img/pizza.png",
     type: "양식",
     data: ["c", "b"],
+    link: "resultPage/result19.html",
   },
   {
     name: "샌드위치",
@@ -159,6 +178,7 @@ const foodList = [
     img: "img/sandwich.png",
     type: "양식",
     data: ["c", "c"],
+    link: "resultPage/result20.html",
   },
   {
     name: "우동",
@@ -166,6 +186,7 @@ const foodList = [
     img: "img/noodle1.png",
     type: "일식",
     data: ["a", "a"],
+    link: "resultPage/result21.html",
   },
   {
     name: "냉모밀",
@@ -173,6 +194,7 @@ const foodList = [
     img: "img/noodle.png",
     type: "일식",
     data: ["a", "b"],
+    link: "resultPage/result22.html",
   },
   {
     name: "돈까스",
@@ -180,6 +202,7 @@ const foodList = [
     img: "img/tonkatsu.png",
     type: "일식",
     data: ["b", "a"],
+    link: "resultPage/result23.html",
   },
   {
     name: "초밥",
@@ -187,6 +210,7 @@ const foodList = [
     img: "img/sushi.png",
     type: "일식",
     data: ["b", "b"],
+    link: "resultPage/result24.html",
   },
   {
     name: "오코노미야키",
@@ -194,6 +218,7 @@ const foodList = [
     img: "img/okonomiyaki.png",
     type: "일식",
     data: ["c", "a"],
+    link: "resultPage/result25.html",
   },
   {
     name: "모둠 사시미",
@@ -201,24 +226,28 @@ const foodList = [
     img: "img/sashimi.png",
     type: "일식",
     data: ["c", "b"],
+    link: "resultPage/result26.html",
   },
   {
     name: "라멘",
     words: "라면과는 확실히 다른 매력...!",
     img: "img/noodle2.png",
     type: "일식",
+    link: "resultPage/result27.html",
   },
   {
     name: "규동",
     words: "고기 얹어진 밥이 맛이 없을수가 없쥬~",
     img: "img/donburi.png",
     type: "일식",
+    link: "resultPage/result28.html",
   },
   {
     name: "연어덮밥",
     words: "연어 이즈 뭔들",
     img: "img/salmon.png",
     type: "일식",
+    link: "resultPage/result29.html",
   },
   {
     name: "짜장면",
@@ -226,6 +255,7 @@ const foodList = [
     img: "img/jajangmyeon.png",
     type: "중식",
     data: ["a", "a"],
+    link: "resultPage/result30.html",
   },
   {
     name: "짬뽕",
@@ -233,6 +263,7 @@ const foodList = [
     img: "img/noodle1.png",
     type: "중식",
     data: ["a", "b"],
+    link: "resultPage/result31.html",
   },
   {
     name: "새우볶음밥",
@@ -240,6 +271,7 @@ const foodList = [
     img: "img/friedrice.png",
     type: "중식",
     data: ["b", "a"],
+    link: "resultPage/result32.html",
   },
   {
     name: "마라샹궈",
@@ -247,6 +279,7 @@ const foodList = [
     img: "img/soup.png",
     type: "중식",
     data: ["b", "b"],
+    link: "resultPage/result33.html",
   },
   {
     name: "양꼬치",
@@ -254,6 +287,7 @@ const foodList = [
     img: "img/meat2.png",
     type: "중식",
     data: ["c", "a"],
+    link: "resultPage/result34.html",
   },
   {
     name: "마라탕",
@@ -261,5 +295,6 @@ const foodList = [
     img: "img/soup.png",
     type: "중식",
     data: ["c", "b"],
+    link: "resultPage/result35.html",
   },
 ];

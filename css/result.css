@@ -28,3 +28,11 @@
   border-radius: 5px;
   margin: 30px;
 }
+#shareResult {
+  background-color: white;
+  border-radius: 20px;
+  width: 70%;
+  text-align: center; /*요소 가운데 정렬*/
+  margin-left: auto; /*가로 중앙*/
+  margin-right: auto; /*가로 중앙*/
+}

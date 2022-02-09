@@ -20,6 +20,7 @@ let typeName = ""; //음식 종류 이름
 let a = []; //선택받은 답 넣는 배열
 let index = []; //질문지 인덱스를 위한 배열
 let endPoint = 0; //질문의 갯수
+let foodNumber = 0;
 let count = 0;
 let indexCount = 0;
 
@@ -31,6 +32,9 @@ function start() {
 }
 function home() {
   location.reload(true);
+}
+function tryAgain() {
+  location.href = "../index.html";
 }
 function ask(typeID) {
   foodType.style.display = NONE;
@@ -123,12 +127,12 @@ function pickResult() {
     }
   });
 }
-function check(number) {}
 function returnResult(resultIndex) {
   //결과 보여주는 함수
-  const nameSpan = document.createElement("span");
-  const wordsP = document.createElement("p");
-  const img = document.createElement("img");
+  foodNumber = resultIndex;
+  let nameSpan = document.createElement("span");
+  let wordsP = document.createElement("p");
+  let img = document.createElement("img");
   nameSpan.innerText = resultIndex.name;
   img.src = resultIndex.img;
   img.width = 200;

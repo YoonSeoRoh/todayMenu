@@ -17,6 +17,15 @@
     <link rel="stylesheet" href="./css/random.css">
     <link rel="stylesheet" href="./css/result.css">
     <link rel="stylesheet" href="./css/animation.css">
+     <!-- kakao sdk 호출 -->
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script>
+    // SDK를 초기화 
+    Kakao.init('0ee2743ac36fa1268e96485b883c1a45');
+    // SDK 초기화 여부를 판단
+    console.log(Kakao.isInitialized());
+</script>
+</head>
 </head>
 <body>
     <div class="container">
@@ -61,11 +70,12 @@
 
             </div>
             <button id="homeBtn" onClick="home()">다시 추천받기</button>
-            <button id="kakaoBtn">결과 공유하기</button>
+            <button id="kakaoBtn" onClick="kakaoShare()">결과 공유하기</button>
             <button id="restaurantBtn">맛집 구경하기</button>
         </section>
     </div>
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/kakao.js"></script>
 </body>
 </html>
