@@ -1,20 +1,20 @@
 const appurl = "https://menuchooser.netlify.app/";
 
 function kakaoShare() {
-  //°øÀ¯ »çÁø
+  //ê³µìœ  ì‚¬ì§„
   const image = foodNumber.img;
-  //°øÀ¯ »çÁø ¸µÅ©
+  //ê³µìœ  ì‚¬ì§„ ë§í¬
   const shareImg = appurl + image;
-  //°øÀ¯
+  //ê³µìœ 
   const url = foodNumber.link;
-  //°øÀ¯ ¸µÅ©
+  //ê³µìœ  ë§í¬
   const shareURL = appurl + url;
-  //°á°ú Ä«Ä«¿ÀÅå °øÀ¯
+  //ê²°ê³¼ ì¹´ì¹´ì˜¤í†¡ ê³µìœ 
   Kakao.Link.sendDefault({
     objectType: "feed",
     content: {
-      title: "¿À´Ã ¹¹ ¸ÔÁö?",
-      description: "°á°ú¸¦ È®ÀÎÇÏ¼¼¿ä!",
+      title: "ì˜¤ëŠ˜ ë­ ë¨¹ì§€?",
+      description: "ê²°ê³¼ë¥¼ í™•ì¸í•˜ì„¸ìš”!",
       imageUrl: shareImg,
       link: {
         mobileWebUrl: shareURL,
@@ -23,7 +23,7 @@ function kakaoShare() {
     },
     buttons: [
       {
-        title: "°á°úº¸±â",
+        title: "ê²°ê³¼ë³´ê¸°",
         link: {
           mobileWebUrl: shareURL,
           webUrl: shareURL,
