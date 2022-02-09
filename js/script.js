@@ -16,6 +16,13 @@ const AMFOOD = "양식";
 const NONE = "none";
 const BLOCK = "block";
 
+let typeName = ""; //음식 종류 이름
+let a = []; //선택받은 답 넣는 배열
+let index = []; //질문지 인덱스를 위한 배열
+let endPoint = 0; //질문의 갯수
+let count = 0;
+let indexCount = 0;
+
 function start() {
   //시작 버튼 눌렀을 때 실행되는 함수
   //음식 종류 선택지
@@ -28,38 +35,60 @@ function home() {
 function ask(typeID) {
   foodType.style.display = NONE;
   question.style.display = BLOCK;
-  qna.innerText = query[0].ask;
-  // const answerFirst = query[0].answer[0];
-  // const answerSecond = query[0].answer[1];
-  // const answerThird = query[0].answer[2];
-  // const index = Object.keys(query[0].answer[0]);
-  // const answer = Object.values(query[0].answer[0]);
-  // console.log(index);
-  // console.log(answer);
-  // const button = document.createElement("button");
-  // answerList.appendChild(button);
-  // button.innerText = answer;
-  for (var i in query[0].answer) {
-    const index = Object.keys(query[0].answer[i]);
-    const answer = Object.values(query[0].answer[i]);
+  //각 음식 종류에 따른 질문 번호를 부여
+  if (typeID === KRFOOD) {
+    index = [0, 2];
+    typeName = KRFOOD;
+  } else if (typeID === CFOOD) {
+    index = [0, 1];
+    typeName = CFOOD;
+  } else if (typeID === JFOOD) {
+    index = [0, 2];
+    typeName = JFOOD;
+  } else if (typeID === AMFOOD) {
+    index = [0, 3];
+    typeName = AMFOOD;
+  }
+  endPoint = index.length;
+  showQuestion(index[indexCount]);
+}
+function showQuestion(indexNum) {
+  //질문 화면에 display
+  answerList.style.animation = answerList.style.display = NONE;
+  if (indexCount === endPoint) {
+    question.style.display = NONE;
+    pickResult();
+  } else {
+    qna.innerText = query[indexNum].ask;
+    showAnswers(indexNum);
+  }
+}
+function showAnswers(num) {
+  //선택지를 화면에 display
+  answerList.style.display = BLOCK;
+  for (let i in query[num].answer) {
+    const n = Object.keys(query[num].answer[i]);
+    const answer = Object.values(query[num].answer[i]);
     const button = document.createElement("button");
     button.innerText = answer;
     button.className = "answerBtn";
     answerList.appendChild(button);
+    button.addEventListener("click", function () {
+      a[count] = n.pop();
+      console.log(a[count]);
+      count++;
+      indexCount = indexCount + 1;
+      var children = document.querySelectorAll(".answerBtn");
+      for (let i = 0; i < children.length; i++) {
+        children[i].disabled = true;
+        children[i].style.display = NONE;
+      }
+      showQuestion(index[indexCount]);
+    });
   }
-  // for (i = 0; i < 3; i++) {
-  //   const answer = query[0].answer[i];
-  //   const p = document.createElement("p");
-  //   p.innerText = answer;
-  //   answerList.appendChild(p);
-  // }
-}
-function pick(num) {
-  //랜덤 추천 중 고르기
-  console.log(num);
 }
 function randomPick() {
-  //랜덤 추천
+  //랜덤 추천화면
   foodType.style.display = NONE;
   random.style.display = BLOCK;
 }
@@ -83,7 +112,20 @@ function pick(index) {
     returnResult(fourth);
   }
 }
+function pickResult() {
+  //필터로 결과 찾아내기
+  console.log(a);
+  foodList.filter(function (number) {
+    if (number.type == typeName) {
+      if (JSON.stringify(number.data) === JSON.stringify(a)) {
+        returnResult(number);
+      }
+    }
+  });
+}
+function check(number) {}
 function returnResult(resultIndex) {
+  //결과 보여주는 함수
   const nameSpan = document.createElement("span");
   const wordsP = document.createElement("p");
   const img = document.createElement("img");
